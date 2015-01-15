@@ -9,15 +9,16 @@ function uploadFile(){
     contentType: false,
     processData: false,
     success: function(data){
-      if(200 == data.code) {
+      if(200 === data.code) {
         $("#imgShow").attr('src', data.msg.url);
+        $("#spanMessage").html("上传成功");
       } else {
-        alert("upload failed");
+        $("#spanMessage").html("上传失败");
       }
       console.log('imgUploader upload success, data:', data);
     },
     error: function(){
-      alert("error in ajax form submission");
+      $("#spanMessage").html("与服务器通信发生错误");
     }
   });
 }

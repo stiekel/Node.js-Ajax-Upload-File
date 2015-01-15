@@ -1,9 +1,6 @@
 /**
- * 
  * 为了便于理解，将所有Express代码写在本文件中
- * 
  * @2015-1-15 crated by http://chensd.com
- * 
  */
 
 var express = require('express')
