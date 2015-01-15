@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "author": "Stiekel"
   "scripts": {
-    "start": "node app",
-    "postinstall": "npm install"
+    "start": "node app"
   },
   "dependencies": {
     "express": "~4.10.7",
