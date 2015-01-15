@@ -1,7 +1,7 @@
 {
   "name": "nodejs-ajax-upload-file",
   "version": "0.0.1",
-  "author": "Stiekel"
+  "author": "Stiekel",
   "scripts": {
     "start": "node app"
   },
