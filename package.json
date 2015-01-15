@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-ajax-upload-file",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node app",
+    "postinstall": "npm install"
+  },
+  "dependencies": {
+    "express": "~4.10.7",
+    "morgan": "~1.3.0",
+    "jade": "~1.8.2",
+    "connect-multiparty": "~1.2.5"
+  },
+  "engines": {
+    "node": "0.11.x"
+  }
+}
