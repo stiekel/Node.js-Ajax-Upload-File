@@ -25,3 +25,7 @@ app.post('/upload', multipart(), function(req, res){
   //return file url
   res.json({code: 200, msg: {url: 'http://' + req.headers.host + '/' + filename}});
 });
+
+app.get('/env', function(req, res){
+    res.json({code:200, msg:{VCAP_SERVICES: process.env.VCAP_SERVICES, DATABASE_URL: process.env.DATABASE_URL}});
+});
