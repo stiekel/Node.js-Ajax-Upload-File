@@ -29,6 +29,7 @@ app.post('/upload', multipart(), function(req, res){
 app.get('/env', function(req, res){
   console.log("process.env.VCAP_SERVICES: ", process.env.VCAP_SERVICES);
   console.log("process.env.DATABASE_URL: ", process.env.DATABASE_URL);
+  console.log("process.env.VCAP_APPLICATION: ", process.env.VCAP_APPLICATION);
   res.json({
     code: 200
     , msg: {
