@@ -5,6 +5,13 @@
   "scripts": {
     "start": "node app"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://coding.net/Stiekel/Node.js-Ajax-Upload-File.git"
+  },
+  "bugs": {
+    "url": "https://coding.net/u/Stiekel/p/Node.js-Ajax-Upload-File/topic/all"
+  },
   "dependencies": {
     "express": "~4.10.7",
     "morgan": "~1.3.0",
