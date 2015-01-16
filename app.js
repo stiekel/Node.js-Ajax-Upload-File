@@ -27,5 +27,11 @@ app.post('/upload', multipart(), function(req, res){
 });
 
 app.get('/env', function(req, res){
-    res.json({code:200, msg:{VCAP_SERVICES: process.env.VCAP_SERVICES, DATABASE_URL: process.env.DATABASE_URL}});
+  res.json({
+    code: 200
+    , msg: {
+      VCAP_SERVICES: process.env.VCAP_SERVICES
+      , DATABASE_URL: process.env.DATABASE_URL
+    }
+  });
 });
