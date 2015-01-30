@@ -14,13 +14,14 @@ app.use(express.static('./public'));
 app.use(morgan('dev'));
 
 app.listen(process.env.PORT || 3000);
+console.log('Node.js Ajax Upload File running at: http://0.0.0.0:3000');
 
 app.post('/upload', multipart(), function(req, res){
   //get filename
   var filename = req.files.files.originalFilename || path.basename(req.files.files.ws.path);
-  //move file to a public directory
+  //copy file to a public directory
   var targetPath = path.dirname(__filename) + '/public/' + filename;
-  //move file
+  //copy file
   fs.createReadStream(req.files.files.ws.path).pipe(fs.createWriteStream(targetPath));
   //return file url
   res.json({code: 200, msg: {url: 'http://' + req.headers.host + '/' + filename}});
