@@ -26,3 +26,16 @@ app.post('/upload', multipart(), function(req, res){
   //return file url
   res.json({code: 200, msg: {url: 'http://' + req.headers.host + '/' + filename}});
 });
+
+app.get('/env', function(req, res){
+  console.log("process.env.VCAP_SERVICES: ", process.env.VCAP_SERVICES);
+  console.log("process.env.DATABASE_URL: ", process.env.DATABASE_URL);
+  console.log("process.env.VCAP_APPLICATION: ", process.env.VCAP_APPLICATION);
+  res.json({
+    code: 200
+    , msg: {
+      VCAP_SERVICES: process.env.VCAP_SERVICES
+      , DATABASE_URL: process.env.DATABASE_URL
+    }
+  });
+});
