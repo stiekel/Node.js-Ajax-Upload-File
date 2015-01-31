@@ -25,3 +25,7 @@ $ node app.js
 ```
 
 再通过浏览器访问`http://ip:3000/`即可。注意，上传的文件会保存在`/tmp`和`public`两个目录中。
+
+###DEMO
+
+请前往[demo](http://node-js-ajax-upload-file.codingapp.com/)。
